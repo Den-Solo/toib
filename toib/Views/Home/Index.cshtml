@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model ToibSolovyov.Models.HomePage
+@{
+    ViewData["model"] = Model;
+}
+<div class="row pt-4">
+    <div class="left-col col-md-6 p-4">
+        <h5>Уязвимые регулярные выражения</h5>
+        <div class="d-grid gap-5"> 
+            @Html.Partial("Test", Model.Test1)
+            @Html.Partial("Test", Model.Test2)
+            @Html.Partial("Test", Model.Test3)
+        </div>
+    </div>
+
+    <div class="col-md-6 p-4">
+        <h5>Исправленные/защищенные регулярные выражения</h5>
+        <div class="d-grid gap-5">
+            @Html.Partial("Test", Model.TestFixed1)
+            @Html.Partial("Test", Model.TestFixed2)
+            @Html.Partial("Test", Model.TestFixed3)
+        </div>
+    </div>
+</div>

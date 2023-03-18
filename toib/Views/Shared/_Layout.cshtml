@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/site.css")
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container body-content">
+        <header class="header bg-light">
+            <div class="d-flex flex-row ps-6 align-items-center">
+                <i class="bi bi-shield-fill fs-1 me-6 text-primary"></i>
+                <h3 class="ms-4">ИТМО. Технологии обеспечения информационной безопасности.</h3>
+            </div>
+            <div>
+                <div>
+                    <p class="">
+                        Вариант 15. Использование регулярного выражения с некорректными ограничениями (CWE-625)
+                    </p>
+                    <p>
+                        Демонстрационный сайт.
+                    </p>
+                    <p>
+                        N4155c  Соловьев Д.С. [265044]
+                    </p>
+                </div>
+
+            </div>
+        </header>
+
+        <main>@RenderBody()</main>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajax-unobtrusive/3.2.6/jquery.unobtrusive-ajax.min.js"></script>
+    @Scripts.Render("~/Scripts/jquery.validate.min.js")
+    @Scripts.Render("~/Scripts/jquery.validate.unobtrusive.min.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
