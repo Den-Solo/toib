@@ -34,3 +34,11 @@ textarea {
 .left-col{
     border-right: 1px solid black;
 }
+
+.pre-wrap {
+    white-space: pre-wrap;
+}
+
+.underline {
+    text-decoration: underline solid red;
+}

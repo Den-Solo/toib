@@ -8,5 +8,7 @@
 
         public string TestName { get; set; }
         public string AdditionalInfo { get; set; }
+
+        public string Code { get; set; }
     }
 }
