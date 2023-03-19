@@ -34,7 +34,7 @@ namespace ToibSolovyov.Models
                "^[A-Za-z]+ \n"
                     + "не имеет ограничение конца строки, что представляет риск, " +
             "в случае его использования для валидации входных данных SQL-запроса вида: \n\n" +
-            "SELECT id, name, age WHERE name LIKE '{userInput}'\n\n" +
+            "SELECT id, name, age FROM users WHERE name LIKE '{userInput}'\n\n" +
             "где userInput берется из введенных в форму значений. \n" +
             "Это позволяет выполнить SQL-инъекцию вида:\n\n" +
             "<span class=\"text-danger \">alexey' INNER JOIN secrets ON users.id = secrets.id  --</span>\n\n" +
@@ -81,7 +81,7 @@ namespace ToibSolovyov.Models
                "^[A-Za-z]+$ \n"
                     + "теперь имеет имеет ограничение конца строки." +
             "В случае его использования для валидации входных данных SQL-запроса вида: \n\n" +
-            "SELECT id, name, age WHERE name LIKE '{userInput}'\n\n" +
+            "SELECT id, name, age FROM users WHERE name LIKE '{userInput}'\n\n" +
             "где userInput берется из введенных в форму значений. \n" +
             "Оно  защищает от SQL-инъекции вида:\n\n" +
             "<span class=\"text-danger \">alexey' INNER JOIN secrets ON users.id = secrets.id  --</span>\n\n" +
