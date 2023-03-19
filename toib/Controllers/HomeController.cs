@@ -52,9 +52,9 @@ namespace ToibSolovyov.Controllers
             Regex regex = new Regex("^[A-Za-z]+");
             var sqlRequest = "";
             if (regex.IsMatch(model.Input ?? ""))
-                sqlRequest = $"SELECT id, name, age WHERE name LIKE '{model.Input}'";
+                sqlRequest = $"SELECT id, name, age  FROM users WHERE name LIKE '{model.Input}'";
             else
-                sqlRequest = $"SELECT id, name, age";
+                sqlRequest = $"SELECT id, name, age  FROM users";
             return PartialView("TestRes", $"Результирующий SQL-запрос: {sqlRequest}");
         }
 
